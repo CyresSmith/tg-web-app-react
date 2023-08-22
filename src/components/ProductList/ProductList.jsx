@@ -26,7 +26,7 @@ const ProductList = () => {
     if (alreadyInCart) {
       newCartItems = cartItems.filter(item => item.id !== product.id);
     } else {
-      newCartItems = [...cartItems, product.id];
+      newCartItems = [...cartItems, product];
     }
 
     setCartItems(newCartItems);
