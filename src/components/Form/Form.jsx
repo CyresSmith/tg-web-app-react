@@ -20,12 +20,12 @@ const Form = () => {
   }, [country, street, subject, tg]);
 
   useEffect(() => {
-    tg.WebApp.onEvent('mainButtonClicked', handleDataSend);
+    tg.onEvent('mainButtonClicked', handleDataSend);
 
     return () => {
-      tg.WebApp.offEvent('mainButtonClicked', handleDataSend);
+      tg.offEvent('mainButtonClicked', handleDataSend);
     };
-  }, [handleDataSend, tg.MainButton, tg.WebApp]);
+  }, [handleDataSend, tg, tg.MainButton]);
 
   useEffect(() => {
     if (!country || !street) {
