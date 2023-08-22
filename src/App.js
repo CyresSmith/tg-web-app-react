@@ -20,7 +20,7 @@ function App() {
     <Routes>
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<ProductList />} />
-        <Route path="/form" element={<Form />} />
+        <Route path="form" element={<Form />} />
       </Route>
     </Routes>
     // </Suspense>
