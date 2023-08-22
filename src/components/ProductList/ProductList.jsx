@@ -21,13 +21,17 @@ const ProductList = () => {
   const onAdd = product => {
     const alreadyInCart = cartItems.find(item => item.id === product.id);
 
+    let newCartItems = [];
+
     if (alreadyInCart) {
-      setCartItems(prev => prev.filter(item => item.id !== product.id));
+      newCartItems = cartItems.filter(item => item.id !== product.id);
     } else {
-      setCartItems(prev => [...prev, product]);
+      newCartItems = [...cartItems, product.id];
     }
 
-    if (cartItems.length === 0) {
+    cartItems(newCartItems);
+
+    if (newCartItems.length === 0) {
       tg.MainButton.hide();
     } else {
       tg.MainButton.show();
