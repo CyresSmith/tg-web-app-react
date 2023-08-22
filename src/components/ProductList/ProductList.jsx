@@ -29,7 +29,7 @@ const ProductList = () => {
       newCartItems = [...cartItems, product.id];
     }
 
-    cartItems(newCartItems);
+    setCartItems(newCartItems);
 
     if (newCartItems.length === 0) {
       tg.MainButton.hide();
