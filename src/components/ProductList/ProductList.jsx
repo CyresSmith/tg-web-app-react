@@ -47,6 +47,7 @@ const ProductList = () => {
       totalPrice: getTotalPrice(cartItems),
       queryID,
     };
+    console.log('🚀 ~ file: ProductList.jsx:50 ~ handleDataSend ~ data:', data);
 
     //   https://tg-web-app-bot.onrender.com/web-data
 
