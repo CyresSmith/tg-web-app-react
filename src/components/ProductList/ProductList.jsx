@@ -36,7 +36,7 @@ const ProductList = () => {
     } else {
       tg.MainButton.show();
       tg.MainButton.setParams({
-        text: `Buy for ${getTotalPrice(newCartItems)}`,
+        text: queryID,
       });
     }
   };
@@ -47,7 +47,6 @@ const ProductList = () => {
       totalPrice: getTotalPrice(cartItems),
       queryID,
     };
-    console.log('🚀 ~ file: ProductList.jsx:50 ~ handleDataSend ~ data:', data);
 
     //   https://tg-web-app-bot.onrender.com/web-data
 
