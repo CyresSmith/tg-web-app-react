@@ -48,9 +48,10 @@ const ProductList = () => {
       queryID,
     };
 
-    //   https://tg-web-app-bot.onrender.com/web-data
+    // https://tg-web-app-bot.onrender.com/web-data
+    // http://localhost:8000/web-data
 
-    fetch('http://localhost:8000/web-data', {
+    fetch('https://tg-web-app-bot.onrender.com/web-data', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
